@@ -45,7 +45,7 @@ T = TypeVar("T")
 class SQABase:
     """Metaclass for SQLAlchemy classes corresponding to core Ax classes."""
 
-    pass
+    __allow_unmapped__ = True
 
 
 Base = declarative_base(cls=SQABase)
